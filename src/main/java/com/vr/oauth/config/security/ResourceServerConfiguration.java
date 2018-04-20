@@ -35,6 +35,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and().authorizeRequests()
         .antMatchers(HttpMethod.OPTIONS).permitAll()
+        .antMatchers(HttpMethod.POST, APIEndpoints.BASE_API_URL_V1 + "/user").permitAll()
         .antMatchers(protectEndpoints).authenticated()
         .and().addFilterBefore(corsFilter, AnonymousAuthenticationFilter.class)
         .anonymous();

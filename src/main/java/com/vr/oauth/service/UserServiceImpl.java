@@ -1,6 +1,7 @@
 package com.vr.oauth.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,8 +25,9 @@ public class UserServiceImpl implements UserService {
 	public void create(User user) {
 		Set<String> roles = new HashSet();
 		roles.add("ROLE_USER");
-		roles.add("USER");
 		user.setRoles(roles);
+		user.setCreatedAt(new Date());
+		user.setActive(true);
 		userRepository.save(user);
 	}
 

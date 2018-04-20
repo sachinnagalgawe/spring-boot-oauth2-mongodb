@@ -33,8 +33,8 @@ public class SwaggerConfig {
   }
 
   private ApiInfo apiInfo() {
-    return new ApiInfoBuilder().title("Learn API Design")
-        .description("Learn API design, API security, documentation and lot more.")
+    return new ApiInfoBuilder().title("Learn Spring Oauth Security")
+        .description("Learn Spring Oauth security")
         .termsOfServiceUrl("https://github.com/sachinnagalgawe")
         .contact(new Contact("Sachin Nagalgawe",
             "https://github.com/sachinnagalgawe",

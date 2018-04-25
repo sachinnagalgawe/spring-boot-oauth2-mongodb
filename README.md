@@ -1,10 +1,25 @@
-# spring-boot-oauth2-mongodb
+#1. Class UserDetailService 
 
-Steps :
+	- Created UserDetailService class which implements following interface :
+ 	   org.springframework.security.core.userdetails.UserDetailsService	
+	
+	- In this class has we implement "loadUserByUsername" method to read the user object from db with the given credentials and return access token.
 
-#1. Run application it will create database and collections.
+	- For further info check :
+	https://docs.spring.io/spring-security/site/docs/4.2.4.RELEASE/apidocs/org/springframework/security/core/userdetails/UserDetailsService.html
 
-#2. API details: 
+
+#2. Class AuthorizationServerConfiguration for all the config related to Authorization Server which we want to get access token
+
+#3. Class OAuth2SecurityConfiguration for enabling oauth security
+
+ for more details go to - http://websystique.com/spring-security/secure-spring-rest-api-using-oauth2/
+
+#4. Class ResourceServerConfiguration for app configuration
+
+#5. Run application it will create database and collections.
+
+#6. API details: 
 
 After that Insert a primary user in "oauth" db and "user" collection for getting access token:
 
